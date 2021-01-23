@@ -1,0 +1,62 @@
+* Why
+  I like anki and mindmaps. My problem with bouth is that anki not link flash
+  cards, and mind maps software are for tree relationships, and only for that
+  plain text with tabs is enough for me.
+
+  I want something that allow me add concepts and relationships, similar to
+  org-roam, and add capabilities for space repetion as anki.
+
+  Problably done with emacs will org-roam and other plugins will be the correct
+  path, but there are other objetive with this project, train my go abilities,
+  that are needed for may carrer.
+
+  I prefer other languages for this project, clojure will be my pricipal option
+  for the dinamyc capabilites and REPL programming.
+
+* Goals
+** Allow add concepts in plain text.
+   I like a lot use org-mode or markdown to store information and not depend of
+   any dabasase to store the information.
+
+   For the firsts prof of conceps, use json maybe is enough.
+** Allow relations between conceps.
+   Create links between conceps, but the links must be questions, example with
+   the concept Spain, the question capital must link with Madrid.
+
+** Learn go.
+*** Json Seralization or equivalen
+    Store the needed information y plain text formats, json, yaml, toml, etc
+*** Console interfaces
+    Use libraries that allow use the terminal, like k9 program.
+*** Create graphs
+    Use grapviz or similar to generate the graph of the concepts.
+*** [Optional] Server and Web programing.
+    Maybe in the future create a web server to interact with the backed, and
+    facilitate the manipulation.
+    
+* Decision record
+** Golang as lenguage.
+   The reason is only instrumental, I need improve my golang skills. Problably
+   if not clojure will be my prefer option.
+** Pseudo petry networks.
+   In petry networks there are nodes, and trigers, and strong rules. In this
+   case I'm not creating a machine estate, is for that reason that is not needed
+   follow all rules of petri networks, and made a simplification.
+   The conceps will have he questions that trigger the next steps.
+   
+   #+begin_src markdown
+   # Galicia.
+   A Comunity of Spain
+   # Relations
+   ## Provincias
+   [La Coruña] [Lugo] [Orense][Pontevera]
+   ## Country
+   [Spain]
+   #+end_src
+
+   The format is only a concept, but is clear the idea, one concept, with
+   explantation or not, will have multiple reletions, each relation can link
+   with one our multiple concepts.
+
+   Is I'm studing Galica concept, the software can sugents 2 questions, when
+   select one of them must show all the other concepts related.
